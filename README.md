@@ -26,3 +26,11 @@ Controls \& Objective
 
 \* Objective Navigate past the turrets without entering threat cones or touching projectiles to reach the goal pad on the far right.
 
+
+
+Repository Link
+
+https://github.com/Chara-Senpai/AMGD
+
+
+
