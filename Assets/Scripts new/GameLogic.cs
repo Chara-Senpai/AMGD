@@ -38,10 +38,10 @@ public class GameLogic : MonoBehaviour
         // 4. Pure-Radian Rocket Barrage System
         if ((fireTimer += Time.deltaTime) >= fireInterval) {
             fireTimer = 0f;
-            float step = (2f * Mathf.PI) / rocketCount, offset = Mathf.PI / 4f; // Full circle = 2*PI, offset = 45 deg in rads
+            float step = (2f * Mathf.PI) / rocketCount, offset = Mathf.PI / 4f;
             for (int i = 0; i < rocketCount; i++) {
                 float theta = offset + (i * step);
-                Vector3 dir = new Vector3(Mathf.Cos(theta), Mathf.Sin(theta), 0f); // x = cos(theta), y = sin(theta)
+                Vector3 dir = new Vector3(Mathf.Cos(theta), Mathf.Sin(theta), 0f);
                 GameObject r = Instantiate(rocketPrefab, player.position, Quaternion.Euler(0, 0, theta * Mathf.Rad2Deg));
                 rockets.Add((r.transform, dir, 0f));
             }
